@@ -3,16 +3,18 @@
 <head>
     <title>Tienda de Bicis</title>
 
+    <!-- CLAVE para celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             margin: 0;
             font-family: Arial;
         }
 
-        /* Barra arriba */
+        /* Barra */
         nav {
-            position: fixed; /* queda fija */
+            position: fixed;
             top: 0;
             width: 100%;
             background-color: rgba(0,0,0,0.7);
@@ -28,7 +30,7 @@
             font-weight: bold;
         }
 
-        /* Sección principal */
+        /* Pantalla principal */
         .inicio {
             height: 100vh;
             background-image: url("img/fondo.jpg");
@@ -48,6 +50,25 @@
             padding: 20px;
             border-radius: 10px;
         }
+
+        /* 📱 MODO CELULAR */
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .inicio h1 {
+                font-size: 30px;
+                padding: 15px;
+            }
+        }
+
     </style>
 </head>
 
@@ -60,9 +81,9 @@
     <a href="#herramientas">Herramientas</a>
 </nav>
 
-<!-- Pantalla principal -->
+<!-- Inicio -->
 <div class="inicio">
-    <h1>Tienda de Bicicletas 🚲</h1>
+    <h1>Repuestos, Accesorios y herramientas en un mismo lugar 🚲</h1>
 </div>
 
 </body>
