@@ -9,10 +9,15 @@
             font-family: Arial;
         }
 
+        /* Barra arriba */
         nav {
-            background-color: #222;
+            position: fixed; /* queda fija */
+            top: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.7);
             padding: 15px;
             text-align: center;
+            z-index: 1000;
         }
 
         nav a {
@@ -22,11 +27,27 @@
             font-weight: bold;
         }
 
-        section {
-            padding: 50px;
+        /* Sección principal */
+        .inicio {
+            height: 100vh;
+            background-image: url("img/fondo.jpg");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .inicio h1 {
+            font-size: 50px;
+            background-color: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 10px;
         }
     </style>
-
 </head>
 
 <body>
@@ -38,21 +59,10 @@
     <a href="#herramientas">Herramientas</a>
 </nav>
 
-<!-- Secciones -->
-<section id="accesorios">
-    <h1>Accesorios</h1>
-    <p>Casco, luces, etc.</p>
-</section>
-
-<section id="repuestos">
-    <h1>Repuestos</h1>
-    <p>Cadenas, frenos, etc.</p>
-</section>
-
-<section id="herramientas">
-    <h1>Herramientas</h1>
-    <p>Llaves, infladores, etc.</p>
-</section>
+<!-- Pantalla principal -->
+<div class="inicio">
+    <h1>Tienda de Bicicletas 🚲</h1>
+</div>
 
 </body>
 </html>
