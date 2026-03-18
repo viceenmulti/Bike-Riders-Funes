@@ -3,7 +3,6 @@
 <head>
     <title>Tienda de Bicis</title>
 
-    <!-- CLAVE para celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -30,7 +29,7 @@
             font-weight: bold;
         }
 
-        /* Pantalla principal */
+        /* Inicio */
         .inicio {
             height: 100vh;
             background-image: url("img/fondo.jpg");
@@ -51,12 +50,32 @@
             border-radius: 10px;
         }
 
-        /* 📱 MODO CELULAR */
-        @media (max-width: 600px) {
+        /* Sección contacto con corte */
+        .contacto {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
 
-            nav {
-                padding: 10px;
-            }
+            clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        .contacto h2 {
+            font-size: 40px;
+        }
+
+        .contacto a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #E1306C;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* 📱 Celular */
+        @media (max-width: 600px) {
 
             nav a {
                 display: block;
@@ -66,6 +85,10 @@
             .inicio h1 {
                 font-size: 30px;
                 padding: 15px;
+            }
+
+            .contacto h2 {
+                font-size: 28px;
             }
         }
 
@@ -83,8 +106,15 @@
 
 <!-- Inicio -->
 <div class="inicio">
-    <h1>Repuestos, Accesorios y herramientas en un mismo lugar 🚲</h1>
+    <h1>Repuestos, Accesorios y herramientas en un mismo lugar 👇🚲</h1>
 </div>
+
+<!-- Contacto -->
+<section class="contacto">
+    <h2>Consultas</h2>
+    <p>Hablame por Instagram 👇</p>
+    <a href="#">Instagram</a>
+</section>
 
 </body>
 </html>
