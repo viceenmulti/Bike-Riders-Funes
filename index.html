@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bike Riders</title>
+    <title>Bike riders</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -50,7 +50,41 @@
             border-radius: 10px;
         }
 
-        /* Sección contacto con corte */
+        /* Productos */
+        .productos {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .productos h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            margin: auto;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Contacto con corte */
         .contacto {
             background-color: #111;
             color: white;
@@ -87,6 +121,10 @@
                 padding: 15px;
             }
 
+            .productos h2 {
+                font-size: 28px;
+            }
+
             .contacto h2 {
                 font-size: 28px;
             }
@@ -100,8 +138,8 @@
 <!-- Barra -->
 <nav>
     <a href="#accesorios">Accesorios</a>
-    <a href="#repuestos">Repuestos</a>
-    <a href="#herramientas">Herramientas</a>
+    <a href="#">Repuestos</a>
+    <a href="#">Herramientas</a>
 </nav>
 
 <!-- Inicio -->
@@ -109,11 +147,23 @@
     <h1>Repuestos, Accesorios y herramientas en un mismo lugar 👇🚲</h1>
 </div>
 
+<!-- Accesorios -->
+<section id="accesorios" class="productos">
+    <h2>Accesorios</h2>
+
+    <div class="card">
+        <img src="img/pegs.jpg">
+        <h3>pegs</h3>
+        <p> ̶$̶1̶8̶0̶0̶0̶  a  14000</p>
+        <button>Consultar</button>
+    </div>
+</section>
+
 <!-- Contacto -->
 <section class="contacto">
     <h2>Consultas</h2>
     <p>Hablame por Instagram 👇</p>
-    <a href=https://www.instagram.com/bike.riders_funes?igsh=MWp1OXRxaTM5NDhyeg==">Instagram</a>
+    <a href="https://www.instagram.com/bike.riders_funes?igsh=MWp1OXRxaTM5NDhyeg==">Instagram</a>
 </section>
 
 </body>
