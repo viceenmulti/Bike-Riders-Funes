@@ -6,22 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        <script>
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function() {
-        const id = this.getAttribute("data-target");
-        const elemento = document.getElementById(id);
-
-        const offset = 80; // altura de la barra
-        const posicion = elemento.offsetTop - offset;
-
-        window.scrollTo({
-            top: posicion,
-            behavior: "smooth"
-        });
-    });
-});
-</script>
         body {
             margin: 0;
             font-family: Arial;
@@ -38,11 +22,14 @@ document.querySelectorAll("nav a").forEach(link => {
             z-index: 1000;
         }
 
-        nav a {
+        nav button {
+            background: none;
+            border: none;
             color: white;
             margin: 15px;
-            text-decoration: none;
             font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
         }
 
         /* Inicio */
@@ -100,12 +87,11 @@ document.querySelectorAll("nav a").forEach(link => {
             cursor: pointer;
         }
 
-        /* 🔥 Para que el botón dentro del link no se vea raro */
         .card a {
             text-decoration: none;
         }
 
-        /* Contacto con corte */
+        /* Contacto */
         .contacto {
             background-color: #111;
             color: white;
@@ -132,9 +118,9 @@ document.querySelectorAll("nav a").forEach(link => {
         /* 📱 Celular */
         @media (max-width: 600px) {
 
-            nav a {
+            nav button {
                 display: block;
-                margin: 10px 0;
+                margin: 10px auto;
             }
 
             .inicio h1 {
@@ -158,11 +144,9 @@ document.querySelectorAll("nav a").forEach(link => {
 
 <!-- Barra -->
 <nav>
-    <nav>
-    <a data-target="accesorios">Accesorios</a>
-    <a data-target="repuestos">Repuestos</a>
-    <a data-target="herramientas">Herramientas</a>
-</nav>
+    <button onclick="irSuave('accesorios')">Accesorios</button>
+    <button onclick="irSuave('repuestos')">Repuestos</button>
+    <button onclick="irSuave('herramientas')">Herramientas</button>
 </nav>
 
 <!-- Inicio -->
@@ -184,6 +168,7 @@ document.querySelectorAll("nav a").forEach(link => {
         </a>
     </div>
 </section>
+
 <!-- Herramientas -->
 <section id="herramientas" class="productos">
     <h2>Herramientas</h2>
@@ -198,26 +183,43 @@ document.querySelectorAll("nav a").forEach(link => {
         </a>
     </div>
 </section>
-    <!-- Repuestos -->
+
+<!-- Repuestos -->
 <section id="repuestos" class="productos">
     <h2>Repuestos</h2>
 
     <div class="card">
         <img src="img/frenos.jpg">
         <h3>Frenos tipo taquito (par)</h3>
-        <p>   ̶$̶3̶0̶0̶0̶  a  $1500  </p>
+        <p>̶$̶3̶0̶0̶0̶ a $1500</p>
 
         <a href="repuesto.html">
             <button>Más informacion</button>
         </a>
     </div>
 </section>
+
 <!-- Contacto -->
 <section class="contacto">
     <h2>Consultas</h2>
     <p>Hablame por Instagram 👇</p>
     <a href="https://www.instagram.com/bike.riders_funes?igsh=MWp1OXRxaTM5NDhyeg==">Instagram</a>
 </section>
+
+<!-- 🔥 SCRIPT -->
+<script>
+function irSuave(id) {
+    const elemento = document.getElementById(id);
+    const offset = 80;
+
+    const posicion = elemento.offsetTop - offset;
+
+    window.scrollTo({
+        top: posicion,
+        behavior: "smooth"
+    });
+}
+</script>
 
 </body>
 </html>
